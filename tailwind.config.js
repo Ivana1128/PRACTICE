@@ -24,6 +24,7 @@ module.exports = {
       },
       backgroundImage: theme => ({
         'splash-pattern': "url('https://media.cmsmax.com/fqsmwuwheeyba5isyhksr/transparent-bg.png')",
+        'blog-thumbnail': "url('https://i.ytimg.com/vi/6lt2JfJdGSY/maxresdefault.jpg')",
        })
     },
   },

@@ -13,6 +13,10 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <!-- -->
 
+  <!-- Font Awesome -->
+  <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
+
+
   <!-- google font -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
@@ -66,33 +70,62 @@
   </header>
 
   <section class="blog-page">
-    <div class="blog-page__thumbnail">
-      <img src="images/photo-1486608766848-9b9fe0c37b9d-1266x951-800x600.jpg" class="object-cover h-96 w-full" alt="">
-    </div>
-    <div class="blog-page__content-wrapper my-20">
-      <div class="container lg:flex">
-        <div class="blog-page__content-sidebar lg:w-4/12">
-          <div class="logo-wrapper">
-            <img src="images/fashion-logo_23-2148558723.jpg" class="h-32 inline-block" alt="">
+    <div class="container">
+      <div class="py-6">
+        <h1 class="text-5xl text-black font-bold">
+          Lion's RUN i Koenigsegg Agera na stazi centra NAVAK
+        </h1>
+        <hr class="my-4">
+      </div>
+
+      <div class="blog-page__thumbnail bg-blog-thumbnail h-96 bg-fixed bg-center bg-no-repeat bg-cover">
+        <!-- <img src="images/photo-1486608766848-9b9fe0c37b9d-1266x951-800x600.jpg" class="object-cover w-full h-96"> -->
+      </div>
+
+      <div class="icons my-2 -mx-2 flex sm:justify-between items-center flex-wrap">
+        <div class="avatar__wrapper flex">
+          <i class="fas fa-user-circle fa-3x m-2"></i>
+          <div class="autor m-2">
+            <h3>Ivana Lepojka</h3>
+            <p>5. Jul,2021 10:50</p>
           </div>
-          <h4 class="font-bold mb-2 text-lg">Handbook</h4>
-          <ol class="list-decimal text-sm underline ">
-            <li><a href="#">Preface: The Original of Stimulus</a></li>
-            <li><a href="#">Introduction</a></li>
-            <li><a href="#">Hello, Stimulus</a></li>
-            <li><a href="#">Building Something Real</a></li>
-            <li><a href="#" class="font-bold">Designing For Resilience</a></li>
-            <li><a href="#">Managing State</a></li>
-            <li><a href="#">Working With External Resources</a></li>
-            <li><a href="#">Installing Stimulus in Your Application</a></li>
-          </ol>
-          <ul class="underline font-bold">
+        </div>
+        
+        <ul class="sci flex flex-wrap">
+          <li><a href="#" class="facebook h-10 w-14 m-2"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#" class="twitter h-10 w-14 m-2"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#" class="instagram h-10 w-14 m-2"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#" class="linkedin h-10 w-14 m-2"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="#" class="youtube h-10 w-14 m-2"><i class="fab fa-youtube"></i></a></li>
+          <li><a href="#" class="pinterest h-10 w-14 m-2"><i class="fab fa-pinterest-p"></i></a></li>          
+        </ul>
+      </div>
+    </div>
+
+    <div class="blog-page__content-wrapper my-5">
+      <div class="container md:flex">
+        <div class="blog-page__content-sidebar md:w-5/12 lg:w-4/12">
+          <ul class="list-inside font-bold">
+            <li class="my-2">
+              <a href="#">Handbook</a>
+              <ol class="px-2 list-decimal text-sm list-inside font-normal">
+                <li><a href="#">Preface: The Original of Stimulus</a></li>
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Hello, Stimulus</a></li>
+                <li><a href="#">Building Something Real</a></li>
+                <li><a href="#">Designing For Resilience</a></li>
+                <li><a href="#">Managing State</a></li>
+                <li><a href="#">Working With External Resources</a></li>
+                <li><a href="#">Installing Stimulus in Your Application</a></li>
+              </ol>
+            </li>
             <li class="my-2"><a href="#">Reference</a></li>
-            <li><a href="#">Community</a></li>
-            <li class="mt-2"><a href="#">Source Code</a></li>
+            <li class="my-2"><a href="#">Community</a></li>
+            <li class="my-2"><a href="#">Source Code</a></li>
           </ul>
         </div>
-        <div class="blog-page__content-main lg:w-8/12">
+
+        <div class="blog-page__content-main md:w-7/12 lg:w-8/12">
           <section class="number__1">
             <h1 class="font-bold text-3xl">Designing For Resilience</h1>
               <p class="my-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui quidem esse dicta excepturi
@@ -128,7 +161,7 @@
               <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt asperiores sunt debitis
               vitae recusandae amet.</p>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-4 rounded">
+              <button class="relative inline-block border-2 border-black font-bold py-2 px-4 mt-4">
                 Next: Managing State
               </button>
           </section>
@@ -137,12 +170,22 @@
     </div>
   </section>
   
-  <footer>
+  <footer class="p-4 xl:py-4 xl:px-11">
     <div class="footer">
-      <div class="grid-cols-9">Lorem ipsum dolor sit amet.</div>
+      <div class="container">
+        <p class="">Lorem ipsum dolor sit amet.</p>
+      </div>
     </div>
   </footer>
 
+  <script src="vanilla-tilt.min.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".sci li a"), {
+      max: 30,
+      speed: 400,
+      "max-glare": 1,
+    });
+  </script>
 </body>
 
 </html>
