@@ -13,6 +13,7 @@ module.exports = {
       fontFamily: {
         //sans: ['Roboto', 'sans-serif'],
         //serif: ['Fake Serif', 'serif'],
+        'sans': ['Raleway', 'sans-serif'],
       },
       container: {
         padding: '15px',
@@ -23,8 +24,7 @@ module.exports = {
         //secondary: '#771833',
       },
       backgroundImage: theme => ({
-        'splash-pattern': "url('https://media.cmsmax.com/fqsmwuwheeyba5isyhksr/transparent-bg.png')",
-        'blog-thumbnail': "url('https://i.ytimg.com/vi/6lt2JfJdGSY/maxresdefault.jpg')",
+        'splash-pattern': "url('https://media.cmsmax.com/onciqs68ghhnvupuxzbav/beaver-creek-mini-storage.jpeg')",
        })
     },
   },
@@ -33,3 +33,5 @@ module.exports = {
   },
   plugins: [],
 };
+
+

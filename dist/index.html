@@ -19,9 +19,13 @@
 
   <!-- google font -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;1,400;1,700&family=Jost:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;1,400;1,700&family=Jost:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  
+    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    
 
   <link rel="stylesheet" href="/build/style.css">
   <link rel="stylesheet" href="css/all.css">
@@ -29,163 +33,59 @@
   <title>Blog</title>
 </head>
 
-<body>
-  <header class="header bg-gray-800 bg-left-bottom bg-repeat-x relative p-4 xl:py-4 xl:px-11">
-    <div class="w-full">
-      <div x-data="{ open: false }" class="flex flex-col mx-auto md:items-center md:justify-between md:flex-row">
-        <div class="header__logo-wrapper flex flex-row items-center justify-between xxl:justify-center xxl:w-2/6">
-          <a href="#">
-            <img src="https://media.cmsmax.com/fqsmwuwheeyba5isyhksr/endovail-logo.svg" class="w-64 pl-5" alt="">
-          </a>
+<body class="sans">
+  <header class="header bg-left-bottom bg-repeat-x relative p-4 xl:py-4 xl:px-11">
+    <div class="container">
+      <div class="w-full">
+        <div x-data="{ open: false }" class="flex flex-col mx-auto md:items-center md:justify-between md:flex-row">
+          <div class="header__logo-wrapper flex flex-row items-center justify-between xxl:justify-center xxl:w-2/6">
+            <a href="#">
+              <img src="https://media.cmsmax.com/onciqs68ghhnvupuxzbav/beaver-creek-mini-storage-logo.svg" class="w-64" alt="logo">
+            </a>
 
-          <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
-            <i class="fas fa-align-justify text-green-700 fa-lg"></i>
-            <path x-show="!open" fill-rule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-              clip-rule="evenodd"></path>
-            <path x-show="open" fill-rule="evenodd"
-              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-              clip-rule="evenodd"></path>
-            </svg>
-          </button>
+            <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+              <i class="fas fa-align-justify text-green-700 fa-lg"></i>
+              <path x-show="!open" fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                clip-rule="evenodd"></path>
+              <path x-show="open" fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+              </svg>
+            </button>
+          </div>
+
+          <nav :class="{'flex': open, 'hidden': !open}"
+            class="flex-col hidden md:flex md:justify-end md:flex-row xxl:w-2/6">
+            <a class="py-1.5 px-1 mt-2 text-base  bg-transparent rounded-lg md:mt-0 md:ml-2 text-green-700 focus:text-white hover:bg-secondary focus:bg-secondary focus:outline-none focus:shadow-outline"
+              href="#">Home</a>
+            <a class="py-1.5 px-1 mt-2 text-base  bg-transparent rounded-lg md:mt-0 md:ml-2 text-green-700 focus:text-white hover:bg-secondary focus:bg-secondary focus:outline-none focus:shadow-outline"
+              href="#">About</a>
+            <a class="py-1.5 px-1 mt-2 text-base  bg-transparent rounded-lg md:mt-0 md:ml-2 text-green-700 focus:text-white hover:bg-secondary focus:bg-secondary focus:outline-none focus:shadow-outline"
+              href="#">Unit Sizes</a>
+            <a class="py-1.5 px-1 mt-2 text-base  bg-transparent rounded-lg md:mt-0 md:ml-2 text-green-700 focus:text-white hover:bg-secondary focus:bg-secondary focus:outline-none focus:shadow-outline"
+              href="#">Photo Gallery</a>
+            <a class="py-1.5 px-1 mt-2 text-base  bg-transparent rounded-lg md:mt-0 md:ml-2 text-green-700 focus:text-white hover:bg-secondary focus:bg-secondary focus:outline-none focus:shadow-outline"
+              href="#">Contact</a>
+          </nav>
         </div>
-
-        <nav :class="{'flex': open, 'hidden': !open}"
-          class="flex-col hidden md:flex md:justify-end md:flex-row xxl:w-2/6">
-          <a class="py-1.5 px-2.5 mt-2 text-lg font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 text-white focus:text-white hover:bg-secondary focus:bg-secondary focus:outline-none focus:shadow-outline"
-            href="#">Home</a>
-          <a class="py-1.5 px-2.5 mt-2 text-lg font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 text-white focus:text-white hover:bg-secondary focus:bg-secondary focus:outline-none focus:shadow-outline"
-            href="#">Shop</a>
-          <a class="py-1.5 px-2.5 mt-2 text-lg font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 text-white focus:text-white hover:bg-secondary focus:bg-secondary focus:outline-none focus:shadow-outline"
-            href="#">About</a>
-          <a class="py-1.5 px-2.5 mt-2 text-lg font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 text-white focus:text-white hover:bg-secondary focus:bg-secondary focus:outline-none focus:shadow-outline"
-            href="#">Blog</a>
-          <a class="py-1.5 px-2.5 mt-2 text-lg font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 text-white focus:text-white hover:bg-secondary focus:bg-secondary focus:outline-none focus:shadow-outline"
-            href="#">Distribute</a>
-          <a class="py-1.5 px-2.5 mt-2 text-lg font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 text-white focus:text-white hover:bg-secondary focus:bg-secondary focus:outline-none focus:shadow-outline"
-            href="#">Contact</a>
-        </nav>
       </div>
     </div>
   </header>
-
-  <section class="blog-page">
-    <div class="container">
-      <div class="py-6">
-        <h1 class="text-5xl text-black font-bold">
-          Lion's RUN i Koenigsegg Agera na stazi centra NAVAK
-        </h1>
-        <hr class="my-4">
-      </div>
-
-      <div class="blog-page__thumbnail bg-blog-thumbnail h-96 bg-fixed bg-center bg-no-repeat bg-cover">
-        <!-- <img src="images/photo-1486608766848-9b9fe0c37b9d-1266x951-800x600.jpg" class="object-cover w-full h-96"> -->
-      </div>
-
-      <div class="icons my-2 -mx-2 flex sm:justify-between items-center flex-wrap">
-        <div class="avatar__wrapper flex">
-          <i class="fas fa-user-circle fa-3x m-2"></i>
-          <div class="autor m-2">
-            <h3>Ivana Lepojka</h3>
-            <p>5. Jul,2021 10:50</p>
-          </div>
-        </div>
-        
-        <ul class="sci flex flex-wrap">
-          <li><a href="#" class="facebook h-10 w-14 m-2"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="#" class="twitter h-10 w-14 m-2"><i class="fab fa-twitter"></i></a></li>
-          <li><a href="#" class="instagram h-10 w-14 m-2"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="#" class="linkedin h-10 w-14 m-2"><i class="fab fa-linkedin-in"></i></a></li>
-          <li><a href="#" class="youtube h-10 w-14 m-2"><i class="fab fa-youtube"></i></a></li>
-          <li><a href="#" class="pinterest h-10 w-14 m-2"><i class="fab fa-pinterest-p"></i></a></li>          
-        </ul>
-      </div>
-    </div>
-
-    <div class="blog-page__content-wrapper my-5">
-      <div class="container md:flex">
-        <div class="blog-page__content-sidebar md:w-5/12 lg:w-4/12">
-          <ul class="list-inside font-bold">
-            <li class="my-2">
-              <a href="#">Handbook</a>
-              <ol class="px-2 list-decimal text-sm list-inside font-normal">
-                <li><a href="#">Preface: The Original of Stimulus</a></li>
-                <li><a href="#">Introduction</a></li>
-                <li><a href="#">Hello, Stimulus</a></li>
-                <li><a href="#">Building Something Real</a></li>
-                <li><a href="#">Designing For Resilience</a></li>
-                <li><a href="#">Managing State</a></li>
-                <li><a href="#">Working With External Resources</a></li>
-                <li><a href="#">Installing Stimulus in Your Application</a></li>
-              </ol>
-            </li>
-            <li class="my-2"><a href="#">Reference</a></li>
-            <li class="my-2"><a href="#">Community</a></li>
-            <li class="my-2"><a href="#">Source Code</a></li>
-          </ul>
-        </div>
-
-        <div class="blog-page__content-main md:w-7/12 lg:w-8/12">
-          <section class="number__1">
-            <h1 class="font-bold text-3xl">Designing For Resilience</h1>
-              <p class="my-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui quidem esse dicta excepturi
-              dolores quo asperiores voluptatem aut error sed.</p>
-              <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. A nemo ipsa nam nulla atque, libero
-              consectetur obcaecati sed ut assumenda.</p>
-              <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae explicabo dicta facilis
-              reiciendis maxime voluptatem! Sit necessitatibus alias iste nisi.</p>
-              <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum rerum aut nam quia corporis
-              soluta ipsa eos libero tempore molestiae.</p>
-          </section>
-          <section class="number__2">
-            <h1 class="font-bold text-3xl mt-20">Progressively Enhancing the PIN Field</h1>
-              <p class="my-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui quidem esse dicta excepturi
-              dolores quo asperiores voluptatem aut error sed.</p>
-              <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. A nemo ipsa nam nulla atque, libero
-              consectetur obcaecati sed ut assumenda.</p>
-            <h3 class="mb-4">Lorem ipsum <span class="bg-gray-200">dolor sit amet</span>consectetur adipisicing.</h3>
-              <p class="bg-gray-200 p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, obcaecati!</p>
-              <h3 class="my-4">Lorem ipsum dolor sit amet.</h3>
-              <p class="bg-gray-200 p-4">Lorem ipsum dolor sit amet.<br>Lorem ipsum dolor sit amet.</p>
-              <h3 class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dignissimos eligendi
-              temporibus iure, sequi exercitationem.</h3>
-              <p class="bg-gray-200 py-4 px-6">Lorem ipsum dolor sit amet.</p>
-              <p class="mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, maiores.</p>
-              <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi molestias saepe sint
-              sapiente cumque, quisquam quibusdam vel nulla tenetur exercitationem.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam earum vitae eveniet nulla, accusantium
-              animi ut sequi eum velit sit hic quo impedit quod quas!</p>
-          </section>
-          <section class="number__3">
-            <h1 class="font-bold text-3xl mt-20">Wrap-Up and Next Steps</h1>
-              <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt asperiores sunt debitis
-              vitae recusandae amet.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <button class="relative inline-block border-2 border-black font-bold py-2 px-4 mt-4">
-                Next: Managing State
-              </button>
-          </section>
-        </div>
-      </div>
+       
+  <section class="splash md:bg-splash-pattern no-repeat bg-center bg-fixed bg-cover">
+    <img src="https://media.cmsmax.com/onciqs68ghhnvupuxzbav/beaver-creek-mini-storage.jpeg" class="md:hidden mx-auto" alt="">
+    <div class="NY h-2/4 text-center text-white xs:bg-green-800 md:bg-opacity-0 xs:py-6 md:py-32">
+      <h2 class="text-4xl font-bold">Beaver Creek Mini Storage</h2>
+      <p class="my-4">Farmington, NY</p>
+      <button class="bg-transparent hover:bg-green-800 text-white hover:text-white py-4 px-8 border border-white hover:border-green-900 tracking-widest">
+        See Storage Units
+      </button>
     </div>
   </section>
-  
-  <footer class="p-4 xl:py-4 xl:px-11">
-    <div class="footer">
-      <div class="container">
-        <p class="">Lorem ipsum dolor sit amet.</p>
-      </div>
-    </div>
-  </footer>
 
-  <script src="vanilla-tilt.min.js"></script>
-  <script>
-    VanillaTilt.init(document.querySelectorAll(".sci li a"), {
-      max: 30,
-      speed: 400,
-      "max-glare": 1,
-    });
-  </script>
+
 </body>
 
 </html>
+
