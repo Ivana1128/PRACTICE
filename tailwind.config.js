@@ -14,6 +14,7 @@ module.exports = {
         //sans: ['Roboto', 'sans-serif'],
         //serif: ['Fake Serif', 'serif'],
         'sans': ['Raleway', 'sans-serif'],
+        'serif': ['Roboto Slab', serif],
       },
       container: {
         padding: '15px',
