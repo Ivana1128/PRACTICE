@@ -40,7 +40,7 @@
         <div x-data="{ open: false }" class="flex flex-col mx-auto md:items-center md:justify-between md:flex-row">
           <div class="header__logo-wrapper flex flex-row items-center justify-between xxl:justify-center xxl:w-2/6">
             <a href="#">
-              <img src="https://media.cmsmax.com/onciqs68ghhnvupuxzbav/beaver-creek-mini-storage-logo.svg" class="w-64" alt="logo">
+              <img src="https://media.cmsmax.com/onciqs68ghhnvupuxzbav/beaver-creek-mini-storage-logo.svg" class="w-56 sm:w-64" alt="logo">
             </a>
 
             <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
@@ -57,15 +57,15 @@
 
           <nav :class="{'flex': open, 'hidden': !open}"
             class="flex-col hidden md:flex md:justify-end md:flex-row xxl:w-2/6">
-            <a class="py-1.5 px-1 mt-2 text-base  bg-transparent rounded-lg md:mt-0 md:ml-2 text-green-700 focus:text-white hover:bg-secondary focus:bg-secondary focus:outline-none focus:shadow-outline"
+            <a class="py-1.5 mx-1 mt-2 text-base  md:mt-0 md:ml-2 text-green-700"
               href="#">Home</a>
-            <a class="py-1.5 px-1 mt-2 text-base  bg-transparent rounded-lg md:mt-0 md:ml-2 text-green-700 focus:text-white hover:bg-secondary focus:bg-secondary focus:outline-none focus:shadow-outline"
+            <a class="py-1.5 mx-1 mt-2 text-base  md:mt-0 md:ml-2 text-green-700"
               href="#">About</a>
-            <a class="py-1.5 px-1 mt-2 text-base  bg-transparent rounded-lg md:mt-0 md:ml-2 text-green-700 focus:text-white hover:bg-secondary focus:bg-secondary focus:outline-none focus:shadow-outline"
+            <a class="py-1.5 mx-1 mt-2 text-base  md:mt-0 md:ml-2 text-green-700"
               href="#">Unit Sizes</a>
-            <a class="py-1.5 px-1 mt-2 text-base  bg-transparent rounded-lg md:mt-0 md:ml-2 text-green-700 focus:text-white hover:bg-secondary focus:bg-secondary focus:outline-none focus:shadow-outline"
+            <a class="py-1.5 mx-1 mt-2 text-base  md:mt-0 md:ml-2 text-green-700"
               href="#">Photo Gallery</a>
-            <a class="py-1.5 px-1 mt-2 text-base  bg-transparent rounded-lg md:mt-0 md:ml-2 text-green-700 focus:text-white hover:bg-secondary focus:bg-secondary focus:outline-none focus:shadow-outline"
+            <a class="py-1.5 mx-1 mt-2 text-base  md:mt-0 md:ml-2 text-green-700"
               href="#">Contact</a>
           </nav>
         </div>
@@ -74,7 +74,7 @@
   </header>
        
   <section class="splash md:bg-splash-pattern no-repeat bg-center bg-fixed bg-cover">
-    <img src="https://media.cmsmax.com/onciqs68ghhnvupuxzbav/beaver-creek-mini-storage.jpeg" class="md:hidden mx-auto" alt="">
+    <img src="https://media.cmsmax.com/onciqs68ghhnvupuxzbav/beaver-creek-mini-storage.jpeg" class="md:hidden w-full" alt="">
     <div class="NY h-2/4 text-center text-white xs:bg-green-800 md:bg-opacity-0 xs:py-6 md:py-32">
       <h2 class="text-4xl font-bold">Beaver Creek Mini Storage</h2>
       <p class="my-4">Farmington, NY</p>
