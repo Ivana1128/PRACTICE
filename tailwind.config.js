@@ -11,10 +11,9 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        //sans: ['Roboto', 'sans-serif'],
-        //serif: ['Fake Serif', 'serif'],
         'sans': ['Raleway', 'sans-serif'],
-        'serif': ['Roboto Slab', serif],
+        'serif': ['Roboto Slab', 'serif'],
+        'relaway': ['Raleway'],
       },
       container: {
         padding: '15px',
@@ -26,6 +25,7 @@ module.exports = {
       },
       backgroundImage: theme => ({
         'splash-pattern': "url('https://media.cmsmax.com/onciqs68ghhnvupuxzbav/beaver-creek-mini-storage.jpeg')",
+        'hero-pattern': "url('https://media.cmsmax.com/onciqs68ghhnvupuxzbav/call-to-action.png')",
        })
     },
   },
@@ -34,5 +34,3 @@ module.exports = {
   },
   plugins: [],
 };
-
-

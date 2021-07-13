@@ -14,7 +14,8 @@
   <!-- -->
 
   <!-- Font Awesome -->
-  <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  
 
 
   <!-- google font -->
@@ -30,7 +31,11 @@
     
 
   <link rel="stylesheet" href="/build/style.css">
+
+  <!-- Font Awesome
   <link rel="stylesheet" href="css/all.css">
+  -->
+
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
   <title>Blog</title>
 </head>
@@ -46,8 +51,11 @@
             </a>
 
             <button class="md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
-              <span class="bg-green-800 text-white p-2">
-                <i class="fas fa-bars fa-lg"></i>
+              <span class="iconify text-3xl bg-green-700 text-white" data-icon="ci:hamburger" data-inline="false"></span>
+              <!--
+                <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
+                <g><path d="M21 18H3v-2h18v2zm0-5H3v-2h18v2zm0-5H3V6h18v2z" fill="#626262"/></g></svg>
               </span>              
               <path x-show="!open" fill-rule="evenodd"
                 d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
@@ -56,6 +64,8 @@
                 d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                 clip-rule="evenodd"></path>
               </svg>
+              -->
+              
             </button>
           </div>
 
@@ -192,11 +202,74 @@
           </blockquote>
         </div>
       </div>
-    </div>
-      
+    </div>     
   </section>
+
+  <section class="hero bg-hero-pattern no-repeat bg-center bg-fixed bg-cover font-serif p-32">
+    <div class="w-7/12 mx-auto text-center text-white">
+      <h3 class="text-3xl font-bold">Ready to get started?</h2>
+      <p class="my-4">Call <a href="#">585-394-0005</a> for more information or click here to send us a message.</p>
+      <button class="bg-green-700 hover:bg-green-900 text-white font-bold py-4 px-8">
+        Contact Us
+      </button>
+    </div>
+  </section>
+
+  <footer class="text-gray-600">
+    <div class="container md:flex flex-wrap xl:flex-nowrap">
+      <div class="footer_title md:w-6/12 xl:4/12 my-10 xl:px-4">
+        <h3 class="text-gray-800 font-black mb-4">MORE INFORMATION</h3>
+        <ul class="footer_main-manu">
+          <li>
+            <a href="#">About Us</a>
+          </li>
+          <li>
+            <a href="#">Photo Gallery</a>
+          </li>
+          <li>
+            <a href="#">Sitemap</a>
+          </li>
+          <li>
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer_title md:w-6/12 xl:4/12 my-10 xl:px-4">
+        <h3 class="text-gray-800 font-black mb-4">UNIT SIZES</h3>       
+        <p class="mb-4">We offer different storage unit size options for all your personal storage needs. Click the link below to learn more information. </p>
+        <a href="#">Learn More</a>      
+    </div>
+
+    <div class="footer_title md:w-6/12 xl:4/12 my-10 xl:px-4">
+      <h3 class="text-gray-800 font-black mb-4">CONTACT US</h3>    
+      <a href="#">1390 Beaver Creek Road <br>
+      Farmington, NY</a>
+      <span>Phone:<a href="#">(585)-398-3380</a></span>
+    </div>
+
+    <div class="footer_title md:w-6/12 xl:4/12 my-10 xl:px-4">
+      <h3 class="text-gray-800 font-black mb-4">HOURS</h3>
+      <p>Gate Hours: 6am - 10pm</p>
+      <p>Office Hours: 8am - 4pm</p>          
+    </div>     
+    </div>    
+  </footer>
+
+  <div class="sub-footer bg-green-700 text-white py-4 items-center">
+    <div class="container md:flex justify-between items-center text-center">
+      <div class="sub-footer_copyright">
+        <p>Beaver Creek Mini Storage of Farmington NY © All Rights Reserved</p>      
+      </div>
+      <div class="logo-cms">
+        <a href="#">
+          <img src="https://media.cmsmax.com/avm46i4gwegtrsbnkq3dz/powered-by-storage-cms.png" class="inline-block" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+    
 
 </body>
 
 </html>
-
